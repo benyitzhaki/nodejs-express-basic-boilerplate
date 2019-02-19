@@ -27,14 +27,13 @@ const get_method = function(req, res) {
 
 const post_method = function(req, res) {
     res.send(basic_response(req, "post"));
-
 };
 
 const put_method = function(req, res) {
     res.send(basic_response(req, "put"));
 };
 
-const delete_method = function(req, res) {
+const delete_method = function (req, res) {
     res.send(basic_response(req, "delete"));
 };
 
