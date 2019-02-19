@@ -1,16 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+// require custom middleware
+const myMiddleware = require('./my_middleware');
+
 // create express app
 const app = express();
 const port = 3000;
 
-// define custom middleware
-const myMiddleware = function (req, res, next) {
-    console.log('Through middleware');
-    next()
-};
-
+// use custom middleware
 app.use(myMiddleware);
 
 // define middleware to fetch url query params and json body

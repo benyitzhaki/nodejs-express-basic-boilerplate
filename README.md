@@ -10,3 +10,9 @@ of the most basic setup required. not intended for use in production environment
 
 # postman
 a postman collection is included for your convenience
+
+# helper repos
+ - create react app  
+ https://github.com/facebook/create-react-app
+ - express generator  
+ https://www.npmjs.com/package/express-generator
