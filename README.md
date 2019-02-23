@@ -24,8 +24,9 @@ Contains both client and server implementation.
 
 
 # setup
-`npm install` and you are good to go (app runs in port 3000 by default using nodemon)   
-`cd client` `npm install`
+`docker-compose up` (localhost:3000)   
+(for GOOGLE_APPLICATION_CREDENTIALS, create credentials.json in the root directory file for easy usage, it will be auto-copied to the docker and be used)
+
 
 # Env variables
  - GOOGLE_APPLICATION_CREDENTIALS   
