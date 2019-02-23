@@ -7,7 +7,7 @@ const { extract_questions } = require('./controllers/questions');
 
 // create express app
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // file uploads handler
 const storage = multer.memoryStorage();
@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 // define routes
-app.post('/api/extract_questions', upload.single('manifest'), extract_questions);
+app.post('/api/extract_questions', upload.single('filepond'), extract_questions);
 
 app.listen(port, () => console.log(`app listening on port ${port}!`));

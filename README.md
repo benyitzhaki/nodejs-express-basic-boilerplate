@@ -20,10 +20,12 @@ Contains both client and server implementation.
  - client
     - react js (https://reactjs.org/)
     - react-filepond for uploading files (https://github.com/pqina/react-filepond)
+    - Material-UI (https://www.npmjs.com/package/@material-ui/core)
 
 
 # setup
-`npm install` and you are good to go (app runs in port 3000 by default using nodemon)
+`npm install` and you are good to go (app runs in port 3000 by default using nodemon)   
+`cd client` `npm install`
 
 # Env variables
  - GOOGLE_APPLICATION_CREDENTIALS   
