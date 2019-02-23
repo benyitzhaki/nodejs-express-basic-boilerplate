@@ -1,6 +1,5 @@
-# nodejs-express-basic-boilerplate
-basic boilerplate for express api. can be used as a basic template for nodejs application, without the overhead
-of the most basic setup required. not intended for use in production environment.
+# Chegg task
+Contains both client and server implementation.
 
 # Main libraries that i used:
  - server
