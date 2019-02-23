@@ -20,7 +20,7 @@ const visionClient = new vision.ImageAnnotatorClient();
 const extract_questions = async function(req, res) {
 
     // read manifest file
-    const manifest = req.body;
+    const manifest = req.file;
 
     if(!manifest) {
         res.status(constants.STATUS_ERROR).send(error_response("manifest.dat file was not provided"));
