@@ -30,7 +30,8 @@ Contains both client and server implementation.
 # Env variables
  - GOOGLE_APPLICATION_CREDENTIALS   
  path to google credentials file with permission to cloud-vision-api (https://cloud.google.com/vision/docs/quickstart-client-libraries)
-
+ - NODE_ENV (production/development), will proxy accordingly
+ 
 # run
 `npm start`
 
