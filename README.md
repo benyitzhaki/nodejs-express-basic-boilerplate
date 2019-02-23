@@ -1,6 +1,13 @@
 # Chegg task
 Contains both client and server implementation.
 
+# Implementation flow:
+ - Create an endpoint that gets a binary file that contains resources in each file. Parse each of the 
+ resources separately, however, in parallel in order to optimize the response time. Once all requests have been
+ finished, return a response.
+ - client has the option to load any manifest.dat file and get aggregated results in json format
+![chegg-task-diagram](chegg-task-diagram.png)
+
 # Main libraries that i used:
  - server
     - Express js (https://expressjs.com)

@@ -33,15 +33,29 @@ const extract_questions = async function(req, res) {
 
     // holds the aggregated results
     const results = new ResponseModel;
+    const promises = [];
 
+    // create requests for all of the resources in the manifest, run them in parallel for a faster response time
     for (let item of parsed_manifest) {
-        const response = await parse_item_by_type(item);
-        for (let response_item of response) {
-            results.add_question(response_item);
-        }
+        const task = new Promise(async function(resolve) {
+            const response = await parse_item_by_type(item);
+            for (let response_item of response) {
+                results.add_question(response_item);
+            }
+            resolve();
+        });
+        promises.push(task);
     }
 
-    res.status(200).send(results);
+    // once all promises have been completed, return a response
+    Promise.all(promises)
+        .then(() => {
+            res.status(200).send(results);
+        })
+        .catch((error) => {
+            console.error(error);
+            res.status(constants.STATUS_ERROR).send(error_response(error));
+        });
 };
 
 /***
