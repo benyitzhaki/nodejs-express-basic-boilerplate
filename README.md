@@ -46,9 +46,5 @@ Api that accepts a binary data and response with an aggregated response of extra
         - status 400
         - body
          ```
-         [ 
-             {"source": "image", "value" : "question value" }, 
-             {"source": "json", "value" : "question value" },
-             {"source": "csv", "value" : "question value" }
-         ]
+         { "error" : "string" }
          ```
